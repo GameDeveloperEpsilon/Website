@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NSF - CREST - Water Level Research: Find out about the water level in Texas"
+    />
+
+    <title>NSF - CREST - Water Level Research</title>
+
+    <link rel="stylesheet" type="text/css" href="standard.css" />
+
+    <!-- Resources -->
+
+    <!-- Ploty.js -->
+    <script src="https://cdn.plot.ly/plotly-2.8.3.min.js"></script>
+    <!-- D3.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+
+    <!-- Main Script-->
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <!--<img src="./resources/nsf_logo.svg" alt="NSF logo" />-->
+    <h1>Texas A&M University - Kingsville Water Level Research</h1>
+    <p id="sponsor-1">Sponsored by NSF - CREST</p>
+    <!--<img src="./resources/layout_set_logo.png" alt="Tamuk logo" />-->
+    <hr />
+    <p id="p-1">
+      This research focuses on the water level in The Winter Garden Agricultural
+      Region. Three sensors have been placed around this region which allows for
+      the study of the water level with respect to the numerous factors which
+      can influence it.
+    </p>
+    <div id="map-1">
+      <span>
+        <img
+          id="graph"
+          src="./resources/south_texas_map_sensors.png"
+          alt="A map of the Winter Garden in Texas"
+          usemap="#Winter_Garden_sensor_map"
+          width="1155"
+          height="855"
+        />
+
+        <map name="#Winter_Garden_sensor_map">
+          <area
+            shape="circle"
+            coords="570,627,50"
+            alt="Sensor_1"
+            onClick="on_click(1)"
+          />
+          <area
+            shape="circle"
+            coords="830,300,50"
+            alt="Sensor_2"
+            onClick="on_click(2)"
+          />
+          <area
+            shape="circle"
+            coords="395,285,50"
+            alt="Sensor_3"
+            onClick="on_click(3)"
+          />
+        </map>
+        <textarea
+          name="info_box"
+          id="text_area_1"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </span>
+      <p id="caption-1">
+        This is a map of the Winter Garden Agricultural region in Texas. The red
+        circles are the locations of the sensors. To select a sensor, please
+        click on it.
+      </p>
+    </div>
+    <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
+  </body>
+</html>
