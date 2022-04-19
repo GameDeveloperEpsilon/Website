@@ -61,6 +61,7 @@ d3.csv("./resources/data.csv", function(err, rows){
 
     var layout = {
     title: 'Water Level vs. Time For Sensors',
+    barmode: 'group',
     };
 
     Plotly.newPlot('myDiv', data, layout);
